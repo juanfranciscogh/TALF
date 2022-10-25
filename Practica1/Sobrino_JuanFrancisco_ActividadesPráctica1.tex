@@ -1,0 +1,31 @@
+\documentclass[20pt,oneside]{extbook}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper, margin=1in, top=20mm, bottom=15mm, landscape]{geometry}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{ dsfont }
+\usepackage{stmaryrd}
+\usepackage{amsmath}
+\title{\Huge {Actividades Pŕactica 1}}
+\author{Juan Francisco Sobrino Ramírez}
+\date{}
+
+
+
+
+
+\begin{document}
+\maketitle
+
+\newpage 
+\subsection*{1. Find the power set R³ of R = \{(1, 1),(1, 2),(2, 3),(3, 4)\}. Check your answer with the script powerrelation.m and write a LATEX document with the solution step by step.}
+
+Para encontrar la relación binaria R³ debemos hallar previamente R², para cada par "p1" buscamos otro par "p2" cuya primera componente sea igual a la segunda de "p1", la cuál será sustituida por la segunda de "p2" creando un nuevo par.\\
+
+Realizando esto hasta modificar todos los pares obtenemos:  R² = \{(1, 2),(1, 3),(2, 4),(3, 4)\}.\\
+
+De la misma forma volvemos a aplicar dicho algoritmo pero esta vez partiendo del resultado anterior R², del que obtendremos: R³ = \{(1, 3),(1, 4),(2, 4),(3, 4)\}
+
+
+\end{document}
