@@ -52,34 +52,20 @@ $M=(\{q_0,q_1,q_2\}, \{a,b\}, \delta, q_0, \{q_1\})$ \\
 example (see script help) in the GitHub repository.\\
 \\b. Specify in finiteautomata.json the automaton created in Activity 1
 and test it with the script!\\}
-
-Computation for a given finite automaton and string.
- The automaton can be either DFA or NFA, and it is defined
- in a JSON file, like this:\\
- \{\\
-     "K" : ["q0", "q1", "q2"],\\
-     "A" : ["a", "b"],\\
-     "s" : "q0",\\
-     "F" : ["q2"],\\
-     "t" : [["q0", "a", "q1"],
-            ["q1", "a", "q1"],
-            ["q1", "b", "q2"],
-            ["q2", "b", "q2"]]\\
-   \}\\
-
-   (a transition consuming the empty string: ["q1", "", "q2"])\\
-
-For example:\\
-
-octave:6 finiteautomata("aa*bb*", "ab", "LaTeX")
-warning: strmatch is obsolete; use strncmp or strcmp instead\\
-
-$M = ( {q_0, q_1, q_2}, {a, b}, q_0, {q_2}, {(q_0, a, q_1), (q_1, a, q_1), (q_1, b, q_2), (q_2, b, q_2)} )$
-
-$w = ab$
-
-$(q_0, ab) \vdash (q_1, b) \vdash (q_2, \varepsilon)$
-
-$x \in L(M)$
+\begin{verbatim}
+    "name" : "a",
+    "representation" : { 
+      "K" : ["q0", "q1", "q2"],
+      "A" : ["a", "b"],
+      "s" : "q0",
+      "F" : ["q1"],
+      "t" : [["q0", "a", "q1"],
+             ["q0", "b", "q2"],
+             ["q1", "a", "q2"],
+             ["q1", "b", "q2"],
+             ["q2", "a", "q2"],
+             ["q2", "b", "q2"]]
+      }
+\end{verbatim}
 
 \end{document}
